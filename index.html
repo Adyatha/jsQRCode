@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- <input  type="text" id="qr-data" onchange="generateQR()"> -->
+        <!-- <a href="https://www.linkedin.com/in/adyatha-g-u-b5b3811b3/"  id="qr-data" onchange="generateQR()"></a> -->
+    <div id="qrcode"></div>
+</body>
+    <script src="davidshimjs-qrcodejs-04f46c6/qrcode.min.js"></script>
+    <!-- <script>
+        var qrdata=document.getElementById('qr-data');
+        var qrcode=new QRCode(document.getElementById('qrcode'));
+       function generateQR(){
+           var data=qrdata.value;
+          qrcode.makeCode(data);
+       }
+    </script> -->
+
+    <script>
+        let qrcode = new QRCode("qrcode",{
+            text:"https://www.linkedin.com/in/adyatha-g-u-b5b3811b3/",
+        
+        });
+        document.addEventListener('click',()=>{
+            qrcode.clear();
+            
+        })
+    </script>
+</html>
